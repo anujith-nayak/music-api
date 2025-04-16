@@ -20,6 +20,37 @@ app.get('/songs', (req, res) => {
     res.json(results);
   });
 });
+app.get('/artist', (req, res) => {
+  db.query('SELECT * FROM ARTIST', (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+app.get('/album', (req, res) => {
+  db.query('SELECT * FROM ALBUM', (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+app.get('/track', (req, res) => {
+  db.query('SELECT * FROM TRACK', (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+app.get('/concert', (req, res) => {
+  db.query('SELECT * FROM CONCERT', (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+app.get('/track_concert', (req, res) => {
+  db.query('SELECT * FROM TRACK_CONCERT', (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+
 app.get("/", (req, res) => {
   res.send("Welcome to the Music API!");
 });
