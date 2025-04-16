@@ -1,0 +1,5 @@
+DB_HOST=sql12.freesqldatabase.com
+DB_USER=sql12773414
+DB_PASSWORD=aHiAB9Krh9
+DB_NAME=sql12773414
+PORT=3000
