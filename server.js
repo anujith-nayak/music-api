@@ -28,3 +28,15 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+app.get("/songs", (req, res) => {
+  const query = "SELECT * FROM songs"; // change to your actual table name
+
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Error fetching songs:", err);
+      res.status(500).json({ error: "Database error" });
+    } else {
+      res.json(results);
+    }
+  });
+});
